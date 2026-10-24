@@ -53,3 +53,130 @@
   border-color: var(--absent);
   color: var(--muted);
 }
+.keyboard {
+  display: grid;
+  gap: 0.4rem;
+  width: 100%;
+  max-width: 30rem;
+}
+
+.keyboard-row {
+  display: flex;
+  justify-content: center;
+  gap: 0.3rem;
+}
+
+.key {
+  flex: 1;
+  max-width: 2.75rem;
+  height: 3.25rem;
+  padding: 0;
+  font: inherit;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  cursor: pointer;
+}
+
+.key-wide {
+  flex: 1.6;
+  max-width: 4.5rem;
+  font-size: 0.7rem;
+}
+
+.key:hover {
+  border-color: var(--magenta);
+}
+
+.key[data-state='correct'] {
+  background: var(--magenta);
+  border-color: var(--magenta);
+  color: var(--bg);
+}
+
+.key[data-state='present'] {
+  border-color: var(--cyan);
+  color: var(--cyan);
+}
+
+.key[data-state='absent'] {
+  background: var(--absent);
+  border-color: var(--absent);
+  color: var(--muted);
+}
+.howto {
+  width: 100%;
+  max-width: 30rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+
+.howto summary {
+  padding: 0.6rem 0.9rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.howto summary:hover,
+.howto[open] summary {
+  color: var(--magenta);
+}
+
+.howto-body {
+  padding: 0 0.9rem 0.9rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.howto-body p {
+  margin: 0.6rem 0;
+}
+
+.howto-examples {
+  display: grid;
+  gap: 0.6rem;
+  margin: 0.75rem 0;
+  padding: 0;
+  list-style: none;
+}
+
+.howto-examples li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.howto-examples .tile {
+  flex: none;
+  width: 2.5rem;
+  font-size: 1.1rem;
+}
+
+.footer {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.footer p {
+  margin: 0.25rem 0;
+}
+
+.footer a {
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px solid var(--magenta);
+}
+
+.footer a:hover {
+  color: var(--magenta);
+}
+
+.footer-credit {
+  font-size: 0.7rem;
+}
