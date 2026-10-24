@@ -1,0 +1,55 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2.5rem 1rem;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.5em;
+  text-shadow: 0 0 12px var(--magenta);
+}
+
+.board {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(5, 3.75rem);
+  gap: 0.5rem;
+}
+
+.tile {
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  font-size: 1.75rem;
+  font-weight: 700;
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+
+.tile[data-state='correct'] {
+  background: var(--magenta);
+  border-color: var(--magenta);
+  color: var(--bg);
+  box-shadow: 0 0 16px rgba(255, 43, 214, 0.55);
+}
+
+.tile[data-state='present'] {
+  border-color: var(--cyan);
+  color: var(--cyan);
+  box-shadow: inset 0 0 10px rgba(43, 228, 255, 0.25);
+}
+
+.tile[data-state='absent'] {
+  background: var(--absent);
+  border-color: var(--absent);
+  color: var(--muted);
+}
